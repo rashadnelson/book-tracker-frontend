@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
+import PostBooks from "./components/PostBooks";
+import GetandDeleteBooks from "./components/GetandDeleteBooks";
+import UpdateBooks from "./components/UpdateBooks";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <h1>Book Tracker</h1>
+      <br></br>
+
+      <div className="post-and-update-books">
+        <PostBooks />
+
+        <UpdateBooks />
+      </div>
+
+      <GetandDeleteBooks />
     </div>
-  );
+  )
 }
 
 export default App;
